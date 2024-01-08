@@ -1,0 +1,25 @@
+#Questão 1 / 4
+#Felipe Augusto Honorato Santana RU 4622517
+
+#Apresentação
+print ('Olá! Seja bem vindo a loja virtual do Felipe Augusto Honorato Santana.')
+valor_produto = float(input('Informe o valor do produto:R$ '))
+quantidade_produto = int(input('Informe a quantidade do produto:R$ '))
+
+#Condições de desconto
+if valor_produto < 1000:
+  desconto = 0
+elif 1000 <= valor_produto < 3000:
+  desconto = 3
+elif 3000 <= valor_produto < 5000:
+  desconto = 5
+else:
+  desconto = 8
+
+#Resultado do calculo
+valor_total = valor_produto * quantidade_produto
+valor_SD = valor_total * quantidade_produto
+valor_CD = valor_total - (valor_total * (desconto / 100))
+print ('O valor unitário é: R$', valor_produto)
+print ('O valor SEM desconto: R$', valor_total)
+print ('O valor COM desconto: R$', valor_CD)
